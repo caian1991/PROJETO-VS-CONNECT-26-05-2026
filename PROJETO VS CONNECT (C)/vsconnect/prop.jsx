@@ -67,3 +67,85 @@ function removerItens(itemParaRemover) {
     setListaItens(listaItens.filter(item => item != itemParaRemover))
 }
 
+
+import { useEffect } from "react";
+
+function MeuComponente() {
+
+    useEffect(() => {
+
+        console.log("Componente Carregado")
+
+    }, [])
+
+    return <div>...</div>
+
+}
+
+import { useState, useEffect } from "react";
+
+import api from "../../utils/api";
+
+function ListaServicos() {
+
+    const [servicos, setServicos] = useState([]);
+
+    function buscarServicos() {
+
+        api.get("servicos")
+
+        .then((response) => {
+
+            setServicos(response.data);
+
+        })
+
+        .catch((error) => {
+
+            console.log("Erro:", error)
+
+        })
+
+    }
+
+    useEffect(() => {
+
+        buscarServicos();
+
+    }, [])
+
+    return (
+
+        <ul>
+
+            {servicos.map((servico, index) => (
+
+                <li key={index}>
+             
+             {servico.nome}
+                
+                </li>
+            
+            ))}
+
+        </ul>
+    )
+}
+
+function cadastrarUsuario(event) {
+
+    event.preventDefault();
+
+    const formData = new FormData();
+
+    formData.append("nome", nome);
+
+    formData.append("email", email);
+
+    formData.append("user_img", foto);
+
+    api.post("users", formData)
+    
+}
+
+
