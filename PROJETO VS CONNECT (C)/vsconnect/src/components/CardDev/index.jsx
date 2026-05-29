@@ -36,9 +36,17 @@ return (
     
     </div>
     <div className="techs">
-        {verificarListaTechs()}
+        {verificarListaTechs().map((tech, indice) => (
+            <span key={indice}>
+                {tech}
+
+            </span>
+        ))}
     </div>
     </div>
 )
     
 }
+
+export default CardDev;
+
