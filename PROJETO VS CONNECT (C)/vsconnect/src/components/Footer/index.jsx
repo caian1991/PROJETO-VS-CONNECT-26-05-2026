@@ -4,9 +4,9 @@ import imgDev from "../../assets/images/dev.png";
 
 import { Link } from "react-router-dom";
 
-import FooterComponent from "../Footer";
+import FooterComponent from "../FooterComponent";
 
-function FooterComponent() {
+function Footer() {
     return (
         <footer id="footer">
 

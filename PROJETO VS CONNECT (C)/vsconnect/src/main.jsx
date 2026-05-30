@@ -8,11 +8,11 @@ import ListaDevs from "./pages/ListaDevs"
 import ListaServicos from "./pages/ListaServicos"
 import Login from "./pages/Login"
 import PerfilUsuario from "./pages/PerfilUsuario"
-import VisualizarServico from "./pages/VisualizarServicos"
+import VisualizarServico from "./pages/VisualizarServico"
 
 import Header from "./components/Header"
 
-import ".index.css"
+import "./index.css"
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
